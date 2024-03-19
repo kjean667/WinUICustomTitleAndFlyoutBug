@@ -16,8 +16,8 @@
     <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
       <Button Content="Click Me">
         <Button.Flyout>
-          <Flyout Placement="Right">
-            <ListView>
+          <Flyout x:Name="MyFlyout" Placement="Right">
+            <ListView DoubleTapped="ListView_OnDoubleTapped">
               <ListView.Items>
                 <ListViewItem>Item 1</ListViewItem>
                 <ListViewItem>Item 2</ListViewItem>
