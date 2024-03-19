@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "WinUICustomTitleBarInhibitsControlInput (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "WinUICustomTitleBarInhibitsControlInput (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

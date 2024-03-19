@@ -1,22 +1,4 @@
-﻿# Describe the bug
-
-When using a custom title bar that extends own content into the title bar, flyouts that are opened over the custom title bar receive no input.
-The mouse input is interpreted as a hover and click on the title bar, not on the items in the flyout.
-Trying to click on the top item in the flyout is instead interpreted as a window movement when clicking and dragging.
-Double-clicking on the top flyout item maximizes the window.
-
-Also, the title bar control buttons for minimize, maximize and closing the window are given priority over the flyout that is displayed above.
-
-# Steps to reproduce the bug
-
-Reproduction sample code is available here: https://
-
-Use AppWindowTitleBar.ExtendsContentIntoTitleBar and SetDragRectangles to extend custom content into the title bar of the window.
-(See WindowTitleHelper.cs in reproduction sample)
-
-Use a simple XAML Window with a Flyout that is tall enough to open over the custom title bar. The Window needs to be the exact right size so that the Flyout is extended over the title bar content.
-
-```
+<?xml version="1.0" encoding="utf-8"?>
 <Window
   x:Class="WinUICustomTitleBarInhibitsControlInput.MainWindow"
   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -55,18 +37,3 @@ Use a simple XAML Window with a Flyout that is tall enough to open over the cust
     </StackPanel>
   </Grid>
 </Window>
-```
-
-![Screen recording of flyout not receiving input when over custom title bar](WinUICustomTitleBarInhibitsControlInput.gif)
-
-# Expected behavior
-
-The first item in the flyout shall be clickable and when hovering over the item the focus background shall be displayed.
-
-# NuGet package version
-
-MicrosoftWindowAppSDK 1.5.240311000
-
-# Windows version
-
-Windows 11 23H2 (22631.3155)
