@@ -7,9 +7,11 @@ Double-clicking on the top flyout item maximizes the window.
 
 Also, the title bar control buttons for minimize, maximize and closing the window are given priority over the flyout that is displayed above.
 
-# Steps to reproduce the bug
+# Bug report
 
-Reproduction sample code is available here: https://
+Bug has been submitted to the microsoft-ui-xaml project here: https://github.com/microsoft/microsoft-ui-xaml/issues/9463
+
+# Steps to reproduce the bug
 
 Use AppWindowTitleBar.ExtendsContentIntoTitleBar and SetDragRectangles to extend custom content into the title bar of the window.
 (See WindowTitleHelper.cs in reproduction sample)
